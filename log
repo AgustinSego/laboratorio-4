@@ -17,3 +17,26 @@ treemap.c:109:12: error: returning ‘TreeMap *’ from a function with incompat
   109 |     return aux;
       |            ^~~
 f975f37
+Thu Apr 30 08:04:59 PM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:105:20: error: initialization of ‘TreeMap *’ from incompatible pointer type ‘TreeNode *’ [-Wincompatible-pointer-types]
+  105 |     TreeMap *aux = tree->root;
+      |                    ^~~~
+treemap.c:106:14: error: ‘TreeMap’ has no member named ‘left’
+  106 |     while(aux->left != NULL){
+      |              ^~
+treemap.c:107:18: error: ‘TreeMap’ has no member named ‘left’
+  107 |         aux = aux->left;
+      |                  ^~
+treemap.c:109:15: error: ‘TreeMap’ has no member named ‘pair’
+  109 |     return aux->pair;
+      |               ^~
+treemap.c:110:1: error: control reaches end of non-void function [-Werror=return-type]
+  110 | }
+      | ^
+cc1: all warnings being treated as errors
+69fd8c3
