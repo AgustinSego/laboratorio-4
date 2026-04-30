@@ -110,6 +110,22 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
+    TreeNode *aux = tree->current;
+    if(aux->right != NULL){
+        TreeNode *aux2 = aux->right;
+        while(aux2->left != NULL){
+            aux2 = aux2->left;
+        }
+        return aux2->pair;
+    }else{
+        TreeNode *aux2 = aux->parent;
+        while(1){
+            if(aux2->pair->key > aux->pair->key)break;
+            aux2 = aux2->parent;
+        }
+        return aux2->pair; 
+    }
+    
     return NULL;
 }
 
