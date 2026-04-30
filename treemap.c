@@ -109,7 +109,7 @@ Pair * firstTreeMap(TreeMap * tree) {
     return aux->pair;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
+Pair * nextTreeMap(TreeMap * tree){
     TreeNode *aux = tree->current;
     if(aux->right != NULL){
         TreeNode *aux2 = aux->right;
@@ -120,7 +120,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         return aux2->pair;
     }else{
         TreeNode *aux2 = aux->parent;
-        if(aux->parent->pair->key < aux->pair->key) return NULL;    
+        if(aux->parent->pair->key > aux->pair->key) return NULL;    
         else{
             while(1){
                 if(aux2->pair->key > aux->pair->key || aux2->parent == NULL)break;
