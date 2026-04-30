@@ -120,7 +120,7 @@ Pair * nextTreeMap(TreeMap * tree){
         return aux2->pair;
     }else{
         TreeNode *aux2 = aux->parent;
-        if(aux->parent->pair->key > aux->pair->key) return NULL;    
+        if(tree->lower_than(aux->parent->pair->key , aux->pair->key) == 0) return NULL;    
         else{
             while(1){
                 if(tree->lower_than(aux2->pair->key, aux->pair->key) == 0 || aux2->parent == NULL)break;
