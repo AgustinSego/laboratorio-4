@@ -62,11 +62,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     }*/
     while(1){
         int cmp = tree->lower_than(key, aux->pair->key);
-        if(cmp < 0){
+        if(cmp == -1){
             if(aux->left == NULL) break;
             aux = aux->left;
             
-        }else if(cmp > 0){
+        }else if(cmp == 1){
             if(aux->right == NULL) break;
             aux = aux->right;
             
