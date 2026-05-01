@@ -149,10 +149,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         }else{
             node->parent->left = node->right;
         }
-    }else{
-        return NULL;
     }
-
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
