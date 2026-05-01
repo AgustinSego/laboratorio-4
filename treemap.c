@@ -126,7 +126,7 @@ Pair * nextTreeMap(TreeMap * tree){
         }    
         else{
             while(1){
-                if(tree->lower_than(aux2->pair->key, aux->pair->key) == 1 || aux2->parent == NULL)break;
+                if(tree->lower_than(aux2->pair->key, aux->pair->key) == 0 || aux2->parent == NULL)break;
                 aux2 = aux2->parent;
             }
             tree->current = aux2;
