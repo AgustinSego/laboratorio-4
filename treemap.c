@@ -61,10 +61,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         int cmp = tree->lower_than(key, aux->pair->key);
         
         if(cmp == -1){
-            aux = aux->left;
+            aux = aux->right;
             
         }else if(cmp == 1){
-            aux = aux->right;
+            aux = aux->left;
             
         }else{
             tree->current = aux;
