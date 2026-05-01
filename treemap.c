@@ -186,7 +186,7 @@ Pair * nextTreeMap(TreeMap * tree){
 
 Pair * upperBound(TreeMap * tree, void* key) {
     if(searchTreeMap(tree, key) != NULL){
-        return return searchTreeMap(tree, key);;
+        return searchTreeMap(tree, key);;
     }
     return NULL;
 }
