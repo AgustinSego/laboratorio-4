@@ -586,3 +586,13 @@ Fri May  1 09:01:16 AM UTC 2026:
  tests:  23|2
 total_score: 40/60
 492c97d
+Fri May  1 09:02:27 AM UTC 2026: 
+ treemap.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:189:16: error: expected expression before ‘return’
+  189 |         return return searchTreeMap(tree, key);;
+      |                ^~~~~~
+065cca3

@@ -185,10 +185,8 @@ Pair * nextTreeMap(TreeMap * tree){
 // Finalmente retorne el par del nodo ub_node.
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    if(searchTreeMap(tree, key) == NULL){
-        return NULL;
-    }else{
-        return searchTreeMap(tree, key);
+    if(searchTreeMap(tree, key) != NULL){
+        return return searchTreeMap(tree, key);;
     }
     return NULL;
 }
