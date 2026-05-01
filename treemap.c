@@ -58,16 +58,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     TreeNode *aux = tree->root;
  
     while(aux != NULL){
-        int cmp = tree->lower_than(key, aux->pair->key);
-
-        if(cmp == 0){
-            tree->current = aux;
-            return aux->pair;
-        }else if(cmp != 1){
+        //key es menor a la clave
+        if(tree->lower_than(key,aux->pair->key) > 0){
+            aux = aux->left;
+        }else if(tree->lower_than(aux->pair->key, key) > 0){//la clave es menor que key 
             aux = aux->right;
         }else{
-            aux = aux->left;
-        } 
+            tree->current = aux; 
+            return aux->pair;
+        }
     }
     if(aux == NULL){
         tree->current = NULL;
