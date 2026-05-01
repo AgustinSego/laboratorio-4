@@ -63,21 +63,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         if(cmp == 0){
             tree->current = aux;
             return aux->pair;
-        }else if(cmp < 0){
-            aux = aux->left;
-        }else{
-            aux = aux->right;
-        }
-        /*if(cmp == -1){
-            aux = aux->left;
-            
         }else if(cmp == 1){
-            aux = aux->right;
-            
+            aux = aux->left;
         }else{
-            tree->current = aux;
-            return aux->pair;
-        }*/ 
+            aux = aux->right;
+        } 
     }
     tree->current = NULL;
     return NULL;
