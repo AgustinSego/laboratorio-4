@@ -123,7 +123,10 @@ Pair * nextTreeMap(TreeMap * tree){
         while(aux2 != NULL && tree->lower_than(aux2->pair->key, aux->pair->key) == -1){
             aux2 = aux2->parent;
         }
-        if(aux2 != NULL) return aux2->pair; 
+        if(aux2 != NULL){
+            tree->current = aux2; 
+            return aux2->pair;
+        }
         return NULL;
         /*
         TreeNode *aux2 = aux->parent;
