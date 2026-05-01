@@ -736,3 +736,17 @@ treemap.c:144:45: error: expected ‘;’ before ‘}’ token
       |         ~                                    
 cc1: all warnings being treated as errors
 bc5a7f1
+Fri May  1 09:21:21 PM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:136:32: error: statement with no effect [-Werror=unused-value]
+  136 |             node->parent->left == NULL;
+      |                                ^
+treemap.c:138:33: error: statement with no effect [-Werror=unused-value]
+  138 |             node->parent->right == NULL;
+      |                                 ^
+cc1: all warnings being treated as errors
+1e560d5
