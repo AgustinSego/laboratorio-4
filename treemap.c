@@ -43,9 +43,11 @@ TreeNode * createTreeNode(void* key, void * value) {
 // Reserve memoria, inicialice el resto de variables y retorne el mapa.
     
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
-
-    //map->lower_than = lower_than;
-    return NULL;
+    TreeMap *map = (TreeMap *)malloc(sizeof(TreeMap));
+    map->root = NULL;
+    map->current = NULL;
+    map->lower_than = lower_than;
+    return map;
 }
 
 // 2. Implemente la función Pair* searchTreeMap(TreeMap* tree, void* key), 
@@ -128,21 +130,6 @@ Pair * nextTreeMap(TreeMap * tree){
             return aux2->pair;
         }
         else return NULL;
-        /*
-        TreeNode *aux2 = aux->parent;
-        if(tree->lower_than(aux->parent->pair->key , aux->pair->key) != 0){
-            tree->current = aux; 
-            return NULL;
-        }    
-        else{
-            while(1){
-                if(tree->lower_than(aux2->pair->key, aux->pair->key) == 0 || aux2->parent == NULL)break;
-                aux2 = aux2->parent;
-            }
-            tree->current = aux2;
-            return aux2->pair;
-        }*/
-        
     }
     
     return NULL;
